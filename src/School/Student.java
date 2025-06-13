@@ -1,6 +1,6 @@
 package School;
 
-public class Student extends Person{
+public class Student extends Person {
     private String studentId;
     private String password;
     private int year;
@@ -9,7 +9,9 @@ public class Student extends Person{
     private String email;
     private Course[] enrolledCourses;
 
-    Student(String studentId, String password, int year, String department, String major, String email) {
+    Student(String name, int age, String dob, String address, String phone, String ssn,
+            String studentId, String password, int year, String department, String major, String email) {
+        super(name, age, dob, address, phone, ssn);
         this.studentId = studentId;
         this.password = password;
         this.year = year;
@@ -18,23 +20,22 @@ public class Student extends Person{
         this.email = email;
     }
 
-    Student(String studentId, int year){
+    Student(String studentId, int year) {
         this.studentId = studentId;
         this.year = year;
     }
 
-    Student(){}
+    Student() {}
 
-    private boolean submitAssignment(){
-
+    private boolean submitAssignment() {
         return true;
     }
-    
-    private void checkGrade(){
+
+    private void checkGrade() {
 
     }
 
-    private void checkCourse(){
+    private void checkCourse() {
 
     }
 }

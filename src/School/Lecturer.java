@@ -5,20 +5,27 @@ public class Lecturer extends Person {
     private String department;
     private String email;
     private String password;
-    private Course[] lecturedCoures;
+    private Course[] lecturedCourses;
 
-    Lecturer(String lecturerID, String department, String email, String password) {
+    Lecturer(String name, int age, String dob, String address, String phone, String ssn,
+             String lecturerID, String department, String email, String password) {
+        super(name, age, dob, address, phone, ssn);  // call Person's constructor
         this.lecturerID = lecturerID;
         this.department = department;
         this.email = email;
         this.password = password;
     }
 
+    Lecturer(String lecturerID, String department) {
+        this.lecturerID = lecturerID;
+        this.department = department;
+    }
+
     Lecturer() {}
 
-    private boolean addAssignment(Attachment attachment){
+    private boolean addAssignment() {
 
-        return false;
+        return true;
     }
 
     private void checkAttendance() {
@@ -27,6 +34,6 @@ public class Lecturer extends Person {
 
     private boolean giveGrade() {
 
-        return false;
+        return true;
     }
 }
